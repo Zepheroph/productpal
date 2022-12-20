@@ -18,7 +18,7 @@ tr:nth-child(odd) {
     background-color: #e4e4e4;
 }
 .navbar-custom {
-            background-color: blue;
+            background-color: #18b4ff;
         }
         /* Modify brand and text color */
 
@@ -74,3 +74,4 @@ div.job-listing {
 div.navbar.navbar-inverse navbar-fixed-top {
     background-color: blue;
 }
+

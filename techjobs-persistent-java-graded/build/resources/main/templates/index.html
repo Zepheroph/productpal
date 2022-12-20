@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="fragments :: head">
+    <style>
+    h2 {
+    display: inline-block;
+    }
+    h3.asCouple {
+    display: inline-block;
+    margin-left: 15px;
+    }
+    </style>
 </head>
 <body>
 
 <div th:replace="fragments :: page-header"></div>
 
 <div class="container body-content">
-    <h2>ProductPal</h2>
+
+    <div class="container">
+        <section class="wrapper">
+            <h2 class="banner-head">ProductPal </h2>
+            <p class="banner-text"></p>
+            <a th:href="banner-text" class="nav-link">Category</a>
+            <div class="cat-dropdown">
+            <nav class="navbar">
+            <ul class="dropdown">
+                <li class="dropdown-item" th:each="job : ${jobs}">
+                    <a th:href="@{'/view/' + ${job.id}}" th:text="${job.name}" class="dropdown-link"></a>
+                </li>
+            </ul>
+            <div class="dropdown-bg"></div>
+            </nav>
+            </div>
+        </section>
+    </div>
+
     <ul>
         <li th:each="job : ${jobs}">
             <a th:href="@{'/view/' + ${job.id}}" th:text="${job.name}"></a>

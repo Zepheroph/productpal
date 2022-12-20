@@ -17,6 +17,17 @@ td {
 tr:nth-child(odd) {
     background-color: #e4e4e4;
 }
+.navbar-custom {
+            background-color: #18b4ff;
+        }
+        /* Modify brand and text color */
+
+.navbar-custom .navbar-brand{
+            color: gold;
+        }
+.navbar-custom .navbar-text{
+    color: white;
+}
 
 .centeredTable {
     margin-left: auto;
@@ -60,3 +71,7 @@ div.job-listing {
     width: 80%;
     background-color: #e4e4e4;
 }
+div.navbar.navbar-inverse navbar-fixed-top {
+    background-color: blue;
+}
+

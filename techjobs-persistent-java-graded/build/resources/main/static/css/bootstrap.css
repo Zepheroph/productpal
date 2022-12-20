@@ -240,6 +240,7 @@ th {
   }
   .navbar {
     display: none;
+
   }
   .btn > .caret,
   .dropup > .btn > .caret {
@@ -1411,6 +1412,7 @@ a.bg-danger:focus {
   padding-bottom: 9px;
   margin: 40px 0 20px;
   border-bottom: 1px solid #eee;
+
 }
 ul,
 ol {
@@ -4265,6 +4267,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-fixed-top {
   top: 0;
   border-width: 0 0 1px;
+
 }
 .navbar-fixed-bottom {
   bottom: 0;
@@ -6754,4 +6757,76 @@ button.close {
     display: none !important;
   }
 }
+
+
+
+.cat-dropdown {
+font size: 4rem;
+text-align: center;
+color: black;}
+
+.navbar{
+display: flex;
+justify-content: center;
+}
+
+.banner-head{
+white-space: nowrap
+display: inline-block;
+}
+
+.nav-link {
+border: 5px;
+border-radius: 16px;
+background-color: #c6d8db;
+border: 1px solid black;
+text-align: center;
+display: inline-block;
+color: black;
+margin-left: 15px;
+font-size: 16px;
+}
+
+.banner-text {
+border: 5px;
+border-radius: 16px;
+background-color: #c6d8db;
+border: 1px solid black;
+text-align: center;
+display: inline-block;
+color: black;
+margin-left: 15px;
+font-size: 16px;
+}
+
+.dropdown {
+border-radius: 6x;
+margin-top: 1rem;
+background-color: #c6d8db;
+position: relative;
+z-index: 100;
+opacity: 0;
+visibility: hidden;
+}
+
+.dropdown-item {
+text-align: left;
+padding: 5px 5px 0 5px}
+
+.dropdown-item:last-child{
+padding-bottom: 5px;
+}
+
+.nav-link:hover .dropdown {
+opacity: 1;
+visibility: visible;
+}
+
+.dropdown-item{
+text-align: left;
+padding: 2rem 2rem 0 2rem;
+}
+
+
+
 /*# sourceMappingURL=bootstrap.css.map */
