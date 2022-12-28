@@ -25,6 +25,29 @@
                 <li><a th:href="@{/search}">Search</a></li>
                 <li><a th:href="@{/add}">Add A Product, Pal!</a></li>
                 <li><a th:href="@{employers/add}">Add Category</a></li>
+                <li>
+                    <form th:action="@{/search/results}" method = "post">
+                        <form action="#" class="search_bar" role="search" id="form">-->
+                            <input type="text" id="query" name="searchTerm" placeholder="Search...">
+                            <button type="submit" value="Search">Find a Product, Pal
+                                <i class="fa fa-search"></i>
+                            </button>
+
+                        </form>
+                    </form>
+<!--                    <div id="search">-->
+
+<!--                        <form action="#" class="search_bar" role="search" id="form">-->
+<!--                            <input type="text" id="query" name="searchTerm" placeholder="Search...">-->
+<!--                            <button type="submit" value="Search">Find a Product, Pal-->
+<!--                                <i class="fa fa-search">-->
+<!--                                </i>-->
+<!--                            </button>-->
+
+<!--                        </form>-->
+
+<!--                    </div>-->
+                </li>
             </ul>
         </div>
     </div>

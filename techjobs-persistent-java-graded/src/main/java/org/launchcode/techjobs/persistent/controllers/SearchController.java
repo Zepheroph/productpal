@@ -27,12 +27,15 @@ public class SearchController {
         return "search";
     }
 
+    //removed
+
     @PostMapping("results")
-    public String displaySearchResults(Model model, @RequestParam String searchType, @RequestParam String searchTerm){
+    public String displaySearchResults(Model model,  @RequestParam String searchType, @RequestParam String searchTerm){
         Iterable<Job> jobs;
         if (searchTerm.toLowerCase().equals("all") || searchTerm.equals("")){
             jobs = jobRepository.findAll();
         } else {
+
             jobs = JobData.findByColumnAndValue(searchType, searchTerm, jobRepository.findAll());
         }
         model.addAttribute("columns", columnChoices);
@@ -40,5 +43,6 @@ public class SearchController {
         model.addAttribute("jobs", jobs);
 
         return "search";
+        //changed return search to index
     }
 }
