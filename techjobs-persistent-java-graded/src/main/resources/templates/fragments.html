@@ -26,12 +26,7 @@
                 <li><a th:href="@{/add}">Add A Product, Pal!</a></li>
                 <li><a th:href="@{employers/add}">Add Category</a></li>
                 <li><a th:href="@{Register}">Register an Account</a></li>
-
                 <li>
-
-                    <div class="container body-content">
-
-
                         <form th:action="@{/search/results}" method = "post">
                             <p>
             <span th:each="column : ${columns}">
@@ -43,68 +38,11 @@
                         th:checked="${column.key == 'all'}"/>
                 <label th:for="${column.key}" th:text="${column.value}"></label>
             </span>
-
                             </p>
-
-                            <p>
-                                <label for="searchTerm">Keyword:</label>
+                                <label for="searchTerm"></label>
                                 <input type="text" name="searchTerm" id="searchTerm" />
-                            </p>
-
                             <input type="submit" value="Search" />
                         </form>
-
-                        <hr />
-
-
-
-                    </div>
-
-<!--                    <form th:action="@{/search/results}" method = "post">-->
-<!--                        <form action="#" class="search_bar" role="search" id="form">-->
-<!--                            <input type="text" id="searchTarm" name="searchTerm" placeholder="Search...">-->
-<!--                            <input type="submit" value="Search" />-->
-
-<!--                        </form>-->
-<!--                        <table class="job-listing">-->
-<!--                            <tr th:each="job : ${jobs}">-->
-<!--                                <td>-->
-<!--                                    <p>-->
-<!--                                        Product Id:-->
-<!--                                        <a th:href="@{'/view/' + ${job.id}}" th:text="${job.id}"></a>-->
-<!--                                    </p>-->
-<!--                                    <p th:text="${'Name: ' + job.name}"></p>-->
-<!--                                    <p>-->
-<!--                                        Description:-->
-<!--                                        <a th:href="@{'/employers/view/' + ${job.employer.id}}" th:text="${job.employer.name}"></a>-->
-<!--                                    </p>-->
-<!--                                    <p>-->
-<!--                                        Category:-->
-<!--                                    <ul th:each="skill : ${job.skills}">-->
-<!--                                        <li>-->
-<!--                                            <a th:href="@{'/skills/view/' + ${skill.id}}" th:text="${skill.name}"></a>-->
-<!--                                        </li>-->
-<!--                                    </ul>-->
-<!--                                    </p>-->
-
-<!--                                </td>-->
-<!--                            </tr>-->
-<!--                        </table>-->
-
-<!--                    </form>-->
-<!--&lt;!&ndash;                    <div id="search">&ndash;&gt;-->
-
-<!--&lt;!&ndash;                        <form action="#" class="search_bar" role="search" id="form">&ndash;&gt;-->
-<!--&lt;!&ndash;                            <input type="text" id="query" name="searchTerm" placeholder="Search...">&ndash;&gt;-->
-<!--&lt;!&ndash;                            <button type="submit" value="Search">Find a Product, Pal&ndash;&gt;-->
-<!--&lt;!&ndash;                                <i class="fa fa-search">&ndash;&gt;-->
-<!--&lt;!&ndash;                                </i>&ndash;&gt;-->
-<!--&lt;!&ndash;                            </button>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                        </form>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
-<!--                </li>-->
             </ul>
         </div>
     </div>
