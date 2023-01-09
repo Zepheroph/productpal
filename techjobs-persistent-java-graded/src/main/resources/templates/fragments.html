@@ -29,15 +29,22 @@
                 <li>
                         <form th:action="@{/search/results}" method = "post">
                             <p>
-            <span th:each="column : ${columns}">
                 <input
                         type="radio"
                         name="searchType"
-                        th:id="${column.key}"
-                        th:value="${column.key}"
-                        th:checked="${column.key == 'all'}"/>
-                <label th:for="${column.key}" th:text="${column.value}"></label>
-            </span>
+                        id="all"
+                        value="all"
+                        checked="true"/>
+
+                <label for="all">all</label>
+                  <input
+                          type="radio"
+                          name="searchType"
+                          id="category"
+                          value="category"/>
+                          <label for="category">category</label>
+
+
                             </p>
                                 <label for="searchTerm"></label>
                                 <input type="text" name="searchTerm" id="searchTerm" />
